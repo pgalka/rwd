@@ -11,6 +11,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
             ->appendHttpEquiv('Content-Language', 'pl-PL')
             ->headMeta('My page', 'Description')
         ;
+        $lvView->headLink()->appendStylesheet('/css/style.css');
         
         //$lvView->setHelperPath(APPLICATION_PATH ."/views/helpers/", 'App_Helper');
         //$lvView->doctype(Zend_View_Helper_Doctype::HTML5);

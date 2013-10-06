@@ -1,0 +1,90 @@
+/**
+* konstrukcja @import należy umieszczać na początku pliku, raczej nie zalecane podejscie 
+* kod z uwagi na fakt że kod wsztrzykiwanty jest w miejscu wykonia polecenia przez mogę nie zostać nadpisnae
+* wymagane style
+*/
+/* style zastosowane zostaną dla rozdzielczości <= 640*/
+/* @import 'base_x640.css' all and (max-width: 640px);*/
+
+body { background: #F6F6F6;}
+#content {
+    min-height: 800px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+#content > *{
+    float:left;
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+#content > #nav{
+    width: 20%;
+    background: #F6F6F6;
+}
+#content > #mblock {
+    border: 0px solid red;
+    width: 60%;
+    background: #ffffff;
+}
+#content > #rblock {
+    background: #F6F6F6;
+    width: 20%;
+}
+#header, #footer {
+    display: block;
+}
+#header{ 
+    background: #222222;
+    color:#fff;
+    min-height: 140px;
+}
+#footer{ 
+    clear: both;
+    background: #686868;
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    color: #b2b2b2;
+    font-size: 0.9em;
+    min-height: 100px;
+}
+#nav > ul{
+    list-style: none;
+    margin: 0 0 0 0px;
+    padding: 0px;
+}
+#nav > ul li{
+    border-bottom: 1px solid #DDDDDD;
+    display: block;
+    height: 2.5em;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+}
+#nav > ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#nav > ul li:hover, #nav > ul li.activ{
+    background: #ffffff;
+}
+
+/* definicja media query - dla wszystkich typow uzadzen o rolzdizelczos*/
+/* style zastosowane zostaną dla rozdzielczości <= 640*/
+/*
+@media all and (max-width: 640px) {
+    #content {
+        min-height: 300px;
+        max-height: 300px;
+        border:1px solid red;
+    }
+    #header{background: #0FBCEB;}
+    #footer{background: #125E8B;}
+    #content > *{
+        width: 100% !important;
+    }
+}
+*/

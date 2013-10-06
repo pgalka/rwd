@@ -1,4 +1,7 @@
-<?php echo $this->doctype(); ?>
+<?php
+$this->headLink()->appendStylesheet('/css/base.css');
+echo $this->doctype(); 
+?>
 <html>
 <head>
     <?php echo $this->headTitle();?>
@@ -7,9 +10,48 @@
     <?php echo $this->headStyle();?>
     <?php echo $this->headScript();?>
     <?php echo $this->jQuery();?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="all and (max-width: 640px)" href="/css/base_x640.css" />
+<!--    <link rel="stylesheet" media="only screen and (color)" href="/css/base.css" />-->
 </head>
 <body>
-    <h1>Hello form layout: "<?php echo Zend_Layout::getMvcInstance()->getLayout();?>".</h1>
-    <?php echo $this->layout()->content; ?>
+    <div id="header" class="tal vam">
+        <h1><a href="/">Responsive Web Design - pierwsze kroki</a></h1>
+    </div>
+    <div id="content">
+        <div id="nav">
+            <ul>
+                <li>
+                    <a href="/index/code-reader/ly/1">liquid layout</a>
+                </li>
+                <li>
+                    <a href="/index/code-reader/ly/2">flexible-box layout</a>
+                </li>
+            </ul>
+        </div>
+        <div id="mblock">
+            <?php echo $this->layout()->content; ?>
+        </div>
+        <div id="rblock">
+            <div class="ml5">
+            <h2>Linki zewnetrzne:</h2>
+            <ol>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries" target="_blank">CSS media queries - </a></li>
+                <li><a href="http://blog.kamilbrenk.pl/css3-i-media-queries/" target="_blank">CSS3 i Media Queries - tutorial</a></li>
+                <li><a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/#referrer=blog.kamilbrenk.pl" target="_blank">don’t use @import</a></li>
+                <li><a href="http://jestem.mobi/2012/09/responsive-web-design-czyli-dlaczego-liquid-layout-juz-nie-wystarczy/" target="_blank" style="width:100px;">Responsive Web Design, czyli dlaczego liquid layout już nie wystarczy</a></li>
+                <li><a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/" target="_blank" style="width:100px;">Responsive Web Design: What It Is and How To Use It</a></li>
+                <li><a href="http://blog.piotrnalepa.pl/2013/05/05/css-flexbox-model-inny-sposob-na-responsive-web-design/" target="_blank" style="width:100px;">[CSS] Flexbox model – inny sposób na responsive web design</a></li>
+                <li><a href="http://caniuse.com/flexbox" target="_blank" style="width:100px;">Can I use Flexible Box Layout Module?</a></li>
+                <li><a href="http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx" target="_blank" style="width:100px;">msn - Flexible box ("Flexbox") layout</a></li>
+                <li><a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" style="width:100px;">A Complete Guide to Flexbox</a></li>
+                <li><a href="http://webroad.pl/html5-css3/518-css-grid-layout" target="_blank" style="width:100px;">Grid Layout - przyszłość w tworzeniu stron internetowych</a></li>
+                <li><a href="http://www.w3.org/TR/2013/WD-css3-grid-layout-20130910/" target="_blank" style="width:100px;">CSS Grid Layout Module Level 1</a></li>
+            </ol>
+            </div>
+        </div>
+        <div class="clb"></div>
+    </div>
+    <div id="footer"></div>
 </body>
 </html>

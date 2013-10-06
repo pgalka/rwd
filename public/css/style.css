@@ -2,4 +2,39 @@ html, bodu{
     width:100%;
     padding:0;
     margin:0;
+    font-family: 'Segoe UI', 'Lucida Grande', Helvetica, serif;
+    font-size: 16px;
+}
+/* Skalowanie obrazków */
+img{
+    width: 100%;
+}
+
+.tal{text-align: left;}
+.tac{text-align: center;}
+.tar{text-align: right;}
+
+.vat{ vertical-align: top;}
+.vam{ vertical-align: middle;}
+.vab{ vertical-align: bottom;}
+
+.fl{ float: left;}
+.fr{ float: right;}
+.fnone{ float: none;}
+.clb{ clear: both;}
+
+.ml5{ margin-left: 5px;}
+
+h1 {
+    margin: 0;
+    padding: 0px;
+/*    background: red; */
+    display: inline-block;
+}
+h1 a{
+    color: #fff;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
 }

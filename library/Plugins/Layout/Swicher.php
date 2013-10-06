@@ -3,12 +3,12 @@ class Plugins_Layout_Swicher extends Zend_Controller_Plugin_Abstract
 {
     public function preDispatch(Zend_Controller_Request_Abstract $request)
     {
-        $lvRole = $request->getParam('role','primary');
+        $lvRole = $request->getParam('ly','1');
         $lvLayout = 'layout';
-        if( 'primary' === $lvRole)
+        if( '1' === $lvRole)
         {
             $lvLayout = 'layout';
-        } elseif( 'secondary' === $lvRole)
+        } elseif( '2' === $lvRole)
         {
             $lvLayout = 'layout2';
         }

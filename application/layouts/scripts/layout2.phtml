@@ -1,14 +1,33 @@
-<?php echo $this->doctype(); ?>
+<?php
+$this->headLink()->appendStylesheet('/css/flexible-box.css');
+echo $this->doctype(); 
+?>
 <html>
-<head>
+<head>    
     <?php echo $this->headTitle();?>
     <?php echo $this->headMeta();?>
     <?php echo $this->headLink();?>
     <?php echo $this->headStyle();?>
     <?php echo $this->headScript();?>
+    <?php echo $this->jQuery();?>
 </head>
 <body>
-    <b>Hello form layout: "<?php echo Zend_Layout::getMvcInstance()->getLayout();?>".</b>
-    <?php echo $this->layout()->content; ?>
+    <header>
+        <a href="/">Responsive Web Design - pierwsze kroki</a>
+        header
+    </header>
+    <div id="main">
+        <article>
+            article<br>
+            <?php echo $this->layout()->content; ?>
+        </article>
+        <nav>
+            nav
+        </nav>
+        <aside>
+            aside
+        </aside>
+    </div>
+    <footer>footer</footer>
 </body>
 </html>

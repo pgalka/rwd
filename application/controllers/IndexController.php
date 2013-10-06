@@ -12,6 +12,14 @@ class IndexController extends Zend_Controller_Action
     {
         // action body
     }
+    
+    public function codeReaderAction(){
+        $lvFile = './css/base.css';
+        if( $this->getParam('ly', 1) == 2){
+            $lvFile = './css/flexible-box.css';
+        }
+        $this->view->cssFile = htmlspecialchars( file_get_contents( $lvFile));
+    }
 
 
 }
